@@ -44,8 +44,8 @@ def calculate_news_weight(news_data: Dict, rank_threshold: int = 5) -> float:
     count = news_data.get("count", len(ranks))
 
     # 权重配置（与 config.yaml 保持一致）
-    RANK_WEIGHT = 0.6
-    FREQUENCY_WEIGHT = 0.3
+    RANK_WEIGHT = 0.4
+    FREQUENCY_WEIGHT = 0.5
     HOTNESS_WEIGHT = 0.1
 
     # 1. 排名权重：Σ(11 - min(rank, 10)) / 出现次数
